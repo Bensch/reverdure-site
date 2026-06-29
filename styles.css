@@ -187,6 +187,12 @@ h1, h2, h3 { color: var(--ink); line-height: 1.08; margin: 0; letter-spacing: -0
 .band-mission { background: var(--bg-2); }
 .mission-copy { font-size: clamp(1.1rem, 3.4vw, 1.32rem); color: var(--ink-soft); }
 
+/* faq */
+.faq-item { padding: 22px 0; border-top: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item h3 { font-size: 1.18rem; margin-bottom: 8px; }
+.faq-item p { margin: 0; color: var(--ink-soft); }
+
 /* final cta */
 .band-cta { position: relative; overflow: hidden; isolation: isolate; padding: 84px 0; }
 .cta-bg { z-index: -2; opacity: .9; }
