@@ -77,14 +77,13 @@ h1, h2, h3 { color: var(--ink); line-height: 1.08; margin: 0; letter-spacing: -0
   border-bottom: 1px solid var(--line-2);
 }
 .wordmark {
+  display: inline-flex; align-items: center; gap: 9px;
   color: var(--ink); text-decoration: none;
   font-weight: 750; font-size: 1.2rem; letter-spacing: -0.01em;
 }
-.wordmark::before {
-  content: ""; display: inline-block; width: 12px; height: 13px;
-  margin-right: 9px; vertical-align: -1px;
-  background: var(--green);
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+.wordmark-icon {
+  width: 26px; height: 26px; border-radius: 6px; display: block;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08);
 }
 
 /* ---- hero ---------------------------------------------------------- */
