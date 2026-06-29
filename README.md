@@ -10,6 +10,7 @@ no build step. Lives in its own public repo so the game's source stays private.
 | `index.html` | The page |
 | `styles.css` | All styling (mobile-first) |
 | `assets/hexfield.svg` | Generated hero background (grey → green reclamation) |
+| `assets/screenshot-map.jpg` | In-phone gameplay screenshot shown in the hero |
 | `og-image.png` | Link-preview / social share card |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (no Jekyll) |
 
