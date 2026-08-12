@@ -1,0 +1,170 @@
+<svg viewBox="0 0 960 1560" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif">
+  <title>Reverdure tile card redesign — 2026-08-11 working design</title>
+  <rect width="960" height="1560" fill="#14161c"/>
+  <text x="40" y="52" fill="#e8e8ea" font-size="28" font-weight="600">Tile card redesign — working design</text>
+  <text x="40" y="82" fill="#9a9ba3" font-size="16">One card at every zoom · four fixed doors · likely door open by default · no big button (punted)</text>
+
+  <!-- ============ PANEL 1: the card, mucked own tile ============ -->
+  <text x="40" y="140" fill="#9a9ba3" font-size="18" font-weight="600">1 · Your mucked tile — Restore opens by default</text>
+  <g transform="translate(40,160)">
+    <rect width="420" height="560" rx="18" fill="#262a34" stroke="#363b47"/>
+    <!-- status band -->
+    <text x="24" y="42" fill="#e8e8ea" font-size="19" font-weight="600">Muck in 3h</text>
+    <text x="396" y="42" fill="#5b9bd9" font-size="16" text-anchor="end">yours</text>
+    <line x1="24" y1="58" x2="396" y2="58" stroke="#363b47" stroke-width="1.5"/>
+    <!-- scope strip -->
+    <text x="24" y="90" fill="#6f717a" font-size="13">SCOPE</text>
+    <circle cx="100" cy="85" r="15" fill="#1d3a5c" stroke="#5b9bd9" stroke-width="2.5"/>
+    <text x="100" y="90" fill="#9cc4e8" font-size="11" font-weight="600" text-anchor="middle">All</text>
+    <circle cx="136" cy="85" r="11" fill="#6b5a2a"/>
+    <circle cx="164" cy="85" r="11" fill="#6b5a2a"/>
+    <circle cx="192" cy="85" r="11" fill="#274a2e"/>
+    <circle cx="220" cy="85" r="11" fill="#6b5a2a"/>
+    <circle cx="248" cy="85" r="11" fill="#3a3f4c"/>
+    <circle cx="276" cy="85" r="11" fill="#6b5a2a"/>
+    <circle cx="304" cy="85" r="11" fill="#6b5a2a"/>
+    <text x="330" y="90" fill="#9a9ba3" font-size="13">5 mucked</text>
+    <!-- doors: Restore open -->
+    <g transform="translate(24,116)">
+      <rect width="88" height="40" rx="10" fill="#2b303c" stroke="#4a5162"/>
+      <text x="44" y="26" fill="#e8e8ea" font-size="15" font-weight="600" text-anchor="middle">Restore</text>
+      <rect x="96" width="88" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="140" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Grow</text>
+      <rect x="192" width="88" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="236" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Build</text>
+      <rect x="288" width="84" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="330" y="26" fill="#8e909a" font-size="14" text-anchor="middle">Territory</text>
+    </g>
+    <!-- Restore palette (open) -->
+    <g transform="translate(24,172)">
+      <rect width="372" height="150" rx="12" fill="#20232c"/>
+      <text x="18" y="38" fill="#e8e8ea" font-size="17">&#128167;  Clean this tile</text>
+      <text x="354" y="38" fill="#8fd49a" font-size="15" text-anchor="end">1 energy · +1</text>
+      <line x1="16" y1="54" x2="356" y2="54" stroke="#2e323d"/>
+      <text x="18" y="86" fill="#8e909a" font-size="17">&#9876;  Fight infestation</text>
+      <text x="354" y="86" fill="#6f717a" font-size="15" text-anchor="end">none here</text>
+      <line x1="16" y1="102" x2="356" y2="102" stroke="#2e323d"/>
+      <text x="18" y="134" fill="#6f717a" font-size="14" font-style="italic">Every row: glyph + word + cost — always this order,</text>
+      <text x="18" y="152" fill="#6f717a" font-size="14" font-style="italic">rows never reorder or slide</text>
+    </g>
+    <!-- annotations -->
+    <text x="24" y="368" fill="#9a9ba3" font-size="14">Fixed regions, top to bottom:</text>
+    <text x="24" y="392" fill="#b9bac1" font-size="14">· Status band — one line, one countdown, owner</text>
+    <text x="24" y="414" fill="#b9bac1" font-size="14">· Scope strip — the 7 septants; tap here or on map to scope</text>
+    <text x="24" y="436" fill="#b9bac1" font-size="14">· Four doors — always these four, same order, every tile</text>
+    <text x="24" y="458" fill="#b9bac1" font-size="14">· Open palette — the likely door pre-opened by tile state</text>
+    <text x="24" y="492" fill="#8fd49a" font-size="14">Empty dirt = this exact card with a quiet palette.</text>
+    <text x="24" y="514" fill="#8fd49a" font-size="14">Nothing appears, disappears, or slides with state —</text>
+    <text x="24" y="536" fill="#8fd49a" font-size="14">state only changes what fills the fixed slots.</text>
+  </g>
+
+  <!-- ============ PANEL 2: enemy tile, Territory default ============ -->
+  <text x="510" y="140" fill="#9a9ba3" font-size="18" font-weight="600">2 · Enemy tile at your border — Territory opens</text>
+  <g transform="translate(510,160)">
+    <rect width="410" height="360" rx="18" fill="#262a34" stroke="#363b47"/>
+    <text x="24" y="42" fill="#e07070" font-size="19" font-weight="600">Vulnerable 7/7</text>
+    <text x="386" y="42" fill="#e07070" font-size="16" text-anchor="end">Matt</text>
+    <line x1="24" y1="58" x2="386" y2="58" stroke="#363b47" stroke-width="1.5"/>
+    <text x="24" y="90" fill="#6f717a" font-size="13">SCOPE</text>
+    <circle cx="100" cy="85" r="15" fill="#4a2020" stroke="#e07070" stroke-width="2.5"/>
+    <text x="100" y="90" fill="#f0a0a0" font-size="11" font-weight="600" text-anchor="middle">All</text>
+    <g transform="translate(24,116)">
+      <rect width="86" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="43" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Restore</text>
+      <rect x="94" width="86" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="137" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Grow</text>
+      <rect x="188" width="86" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="231" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Build</text>
+      <rect x="282" width="84" height="40" rx="10" fill="#2b303c" stroke="#4a5162"/>
+      <text x="324" y="26" fill="#e8e8ea" font-size="14" font-weight="600" text-anchor="middle">Territory</text>
+    </g>
+    <g transform="translate(24,172)">
+      <rect width="362" height="112" rx="12" fill="#20232c"/>
+      <text x="18" y="38" fill="#e8e8ea" font-size="17">&#9873;  Capture this tile</text>
+      <text x="344" y="38" fill="#9a9ba3" font-size="15" text-anchor="end">2 energy · 10 min</text>
+      <line x1="16" y1="54" x2="346" y2="54" stroke="#2e323d"/>
+      <text x="18" y="86" fill="#8e909a" font-size="17">&#128204;  Pin this tile</text>
+      <text x="344" y="86" fill="#6f717a" font-size="15" text-anchor="end">free</text>
+    </g>
+    <text x="24" y="330" fill="#b9bac1" font-size="14">Same skeleton, different fills. Doors never move.</text>
+  </g>
+
+  <!-- ============ PANEL 3: drag and drop ============ -->
+  <text x="510" y="580" fill="#9a9ba3" font-size="18" font-weight="600">3 · Drag &amp; drop — place, move, clean</text>
+  <g transform="translate(510,600)">
+    <rect width="410" height="560" rx="18" fill="#1c1f27"/>
+    <!-- tile hex -->
+    <g transform="translate(205,180)">
+      <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60" fill="#262a34" stroke="#363b47" stroke-width="2"/>
+      <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="#3a3f4c"/>
+      <polygon points="0,-108 35,-88 35,-48 0,-28 -35,-48 -35,-88" fill="#6b5a2a"/>
+      <polygon points="70,-70 105,-50 105,-10 70,10 35,-10 35,-50" fill="#274a2e"/>
+      <text x="70" y="-25" fill="#8fd49a" font-size="13" text-anchor="middle">&#127794;</text>
+      <polygon points="-70,-70 -35,-50 -35,-10 -70,10 -105,-10 -105,-50" fill="#3a3f4c" stroke="#8fd49a" stroke-width="2.5" stroke-dasharray="6 4"/>
+    </g>
+    <!-- dragged chip -->
+    <g transform="translate(90,420)">
+      <rect width="150" height="46" rx="12" fill="#2b303c" stroke="#4a5162"/>
+      <text x="75" y="30" fill="#e8e8ea" font-size="15" font-weight="600" text-anchor="middle">&#129514; Vat</text>
+    </g>
+    <path d="M 165 415 C 150 330, 120 240, 128 132" fill="none" stroke="#8fd49a" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8fd49a"/></marker></defs>
+    <text x="24" y="500" fill="#b9bac1" font-size="15">Drag a build chip out of the palette onto a septant —</text>
+    <text x="24" y="522" fill="#b9bac1" font-size="15">eligible ground lights (dashed), drop places it.</text>
+    <text x="24" y="60" fill="#b9bac1" font-size="15">Same language everywhere:</text>
+    <text x="24" y="84" fill="#8fd49a" font-size="14">· Place: drag chip &#8594; septant</text>
+    <text x="24" y="106" fill="#8fd49a" font-size="14">· Move: drag structure &#8594; new septant</text>
+    <text x="24" y="128" fill="#8fd49a" font-size="14">· Clean: drag Clean chip &#8594; muck</text>
+    <text x="24" y="550" fill="#6f717a" font-size="14" font-style="italic">First-use: a ghost hand animates the drag once.</text>
+  </g>
+
+  <!-- ============ PANEL 4: structure septant scoped ============ -->
+  <text x="40" y="780" fill="#9a9ba3" font-size="18" font-weight="600">4 · Tap the greenhouse — same card, scoped</text>
+  <g transform="translate(40,800)">
+    <rect width="420" height="360" rx="18" fill="#262a34" stroke="#363b47"/>
+    <text x="24" y="42" fill="#e8e8ea" font-size="19" font-weight="600">Muck in 3h</text>
+    <text x="396" y="42" fill="#5b9bd9" font-size="16" text-anchor="end">yours</text>
+    <line x1="24" y1="58" x2="396" y2="58" stroke="#363b47" stroke-width="1.5"/>
+    <text x="24" y="90" fill="#6f717a" font-size="13">SCOPE</text>
+    <circle cx="100" cy="85" r="11" fill="#3a3f4c"/>
+    <circle cx="128" cy="85" r="15" fill="#274a2e" stroke="#8fd49a" stroke-width="2.5"/>
+    <text x="128" y="90" fill="#8fd49a" font-size="10" font-weight="600" text-anchor="middle">&#127794;</text>
+    <circle cx="164" cy="85" r="11" fill="#6b5a2a"/>
+    <circle cx="192" cy="85" r="11" fill="#6b5a2a"/>
+    <text x="220" y="90" fill="#9a9ba3" font-size="14">Greenhouse · 2 growing · ready in 40m</text>
+    <g transform="translate(24,116)">
+      <rect width="88" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="44" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Restore</text>
+      <rect x="96" width="88" height="40" rx="10" fill="#2b303c" stroke="#4a5162"/>
+      <text x="140" y="26" fill="#e8e8ea" font-size="15" font-weight="600" text-anchor="middle">Grow</text>
+      <rect x="192" width="88" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="236" y="26" fill="#8e909a" font-size="15" text-anchor="middle">Build</text>
+      <rect x="288" width="84" height="40" rx="10" fill="#20232c" stroke="#2e323d"/>
+      <text x="330" y="26" fill="#8e909a" font-size="14" text-anchor="middle">Territory</text>
+    </g>
+    <g transform="translate(24,172)">
+      <rect width="372" height="112" rx="12" fill="#20232c"/>
+      <text x="18" y="38" fill="#e8e8ea" font-size="17">&#127793;  Feed this greenhouse</text>
+      <text x="354" y="38" fill="#9a9ba3" font-size="15" text-anchor="end">1 fertilizer, from Vat 2</text>
+      <line x1="16" y1="54" x2="356" y2="54" stroke="#2e323d"/>
+      <text x="18" y="86" fill="#8e909a" font-size="17">&#127807;  Plant a seedling</text>
+      <text x="354" y="86" fill="#6f717a" font-size="15" text-anchor="end">needs a ready seedling</text>
+    </g>
+    <text x="24" y="330" fill="#b9bac1" font-size="14">Scoping opens the structure's door. Detail line = refinery clock.</text>
+  </g>
+
+  <!-- footer: door membership -->
+  <text x="40" y="1230" fill="#9a9ba3" font-size="18" font-weight="600">Door membership (the assembly the test pins)</text>
+  <g transform="translate(40,1250)" font-size="15">
+    <rect width="880" height="250" rx="14" fill="#1c1f27"/>
+    <text x="24" y="40" fill="#e8e8ea" font-weight="600">Restore</text>
+    <text x="180" y="40" fill="#b9bac1">Clean · Co-op clean · Fight infestation</text>
+    <text x="24" y="86" fill="#e8e8ea" font-weight="600">Grow</text>
+    <text x="180" y="86" fill="#b9bac1">Plant · Feed / fertilize · Charge shield</text>
+    <text x="24" y="132" fill="#e8e8ea" font-weight="600">Build</text>
+    <text x="180" y="132" fill="#b9bac1">Watchtower · Shield · Zapper · Greenhouse · Vat · Bunker — placed by DRAG</text>
+    <text x="24" y="178" fill="#e8e8ea" font-weight="600">Territory</text>
+    <text x="180" y="178" fill="#b9bac1">Capture · Gift · Make home · Pin · Move (drag) · <tspan fill="#e07070">Dismantle</tspan></text>
+    <text x="24" y="224" fill="#6f717a" font-style="italic">Default-open: mucked &#8594; Restore · own clean+empty &#8594; Build · enemy/unowned border &#8594; Territory · structure scope &#8594; its door</text>
+  </g>
+</svg>
