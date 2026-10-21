@@ -147,7 +147,6 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
   margin: 0 0 10px; font-size: .8rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase; color: var(--heat-4);
 }
-.kicker-ally { color: #c27df2; }
 .section-title { font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.1; font-weight: 800; margin-bottom: 34px; }
 
 /* THE IDEA */
@@ -180,36 +179,6 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 .card-ico svg { width: 24px; height: 24px; }
-
-/* ALLIES */
-.band-allies {
-  background:
-    radial-gradient(60% 80% at 85% 50%, rgba(163, 59, 230, 0.14), transparent 70%),
-    radial-gradient(50% 70% at 10% 40%, rgba(46, 125, 214, 0.12), transparent 70%);
-}
-.allies { display: grid; gap: 30px; align-items: center; }
-.allies .section-title { margin-bottom: 18px; }
-.allies-lead { margin: 0; font-size: 1.1rem; }
-.fine { margin: 14px 0 0; font-size: .88rem; color: var(--ink-mute); }
-.legend { list-style: none; margin: 0; padding: 22px 24px; border-radius: var(--radius); }
-.legend { background: var(--glass); border: 1px solid var(--glass-edge);
-          -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); }
-.legend li { display: flex; align-items: center; gap: 14px; padding: 9px 0; }
-.legend b { color: var(--ink); font-weight: 700; }
-.swatch {
-  flex: none; width: 34px; height: 38px;
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: var(--c);
-  position: relative;
-}
-.swatch::after {
-  content: ""; position: absolute; inset: 3px;
-  clip-path: inherit;
-  background: radial-gradient(circle, rgba(255, 200, 120, 0.55), rgba(140, 20, 5, 0.55) 70%), var(--ground);
-}
-.swatch-you { --c: var(--you); filter: drop-shadow(0 0 6px rgba(46, 125, 214, 0.7)); }
-.swatch-ally { --c: var(--ally); filter: drop-shadow(0 0 6px rgba(163, 59, 230, 0.7)); }
-.swatch-rival { --c: var(--rival); filter: drop-shadow(0 0 6px rgba(214, 52, 46, 0.7)); }
 
 /* DIFFERENTIATORS */
 .diffs { display: grid; gap: 16px; }
@@ -262,7 +231,6 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .diffs { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: repeat(3, 1fr); }
-  .allies { grid-template-columns: 1.4fr 1fr; gap: 56px; }
 }
 @media (min-width: 980px) {
   .hero-bg {
