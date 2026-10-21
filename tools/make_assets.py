@@ -43,7 +43,7 @@ def og_image(territory_path):
     ImageDraw.Draw(m).rounded_rectangle([0, 0, *icon.size], radius=44, fill=255)
     img.paste(icon, (160, 300), m)
     d.text((160, 544), "White Hot", font=font(208, "Heavy"), fill=(246, 242, 236))
-    d.text((168, 804), "Heat up your streets.", font=font(88, "Semibold"), fill=(255, 140, 31))
+    d.text((168, 804), "Heat up your map.", font=font(88, "Semibold"), fill=(255, 140, 31))
     d.text((168, 932), "A territory game played with real workouts.", font=font(60, "Regular"),
            fill=(201, 196, 189))
     d.text((168, 1024), "iPhone + Apple Watch  \u00b7  Free beta", font=font(48, "Medium"), fill=(141, 135, 128))
