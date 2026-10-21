@@ -187,9 +187,9 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
 .diff p { margin: 0; }
 
 /* FEATURES */
-.features { display: grid; gap: 14px; }
+.features { display: grid; gap: 14px; margin-top: 18px; }
 .feature { border-radius: 22px; padding: 22px 22px 20px; }
-.feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.feature h3 { font-size: 1.05rem; }
 .feature p { margin: 0; font-size: .98rem; }
 .splits { display: grid; gap: 7px; margin-top: 16px; }
 /* The ramp laid across the full width, shown as far as the split ran — the app's. */
@@ -203,19 +203,17 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
 .mission-copy { font-size: 1.15rem; margin: 0; }
 
 /* FAQ */
-.faq { display: grid; gap: 12px; }
+.faq { display: grid; gap: 12px; margin-top: 18px; }
 .faq-item { border-radius: 22px; padding: 20px 22px; }
 .faq-item h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .faq-item p { margin: 0; }
 
 /* FINAL CTA */
 .band-cta { overflow: hidden; padding: 110px 0; }
-/* The cold edge of the territory: dim ground and the borders, no white. */
+/* The closing ask: cold ground, one faint ember under the button. */
 .cta-bg {
-  inset: 0;
-  background:
-    radial-gradient(ellipse at center, rgba(10, 16, 23, 0.55) 0%, var(--ground) 75%),
-    url("assets/territory.jpg") 8% 92% / 170% auto no-repeat;
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(40% 60% at 50% 85%, rgba(255, 77, 15, 0.14), transparent 70%);
 }
 .cta-inner { position: relative; z-index: 1; }
 .cta-title { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.08; font-weight: 850; margin-bottom: 30px; }
@@ -228,9 +226,9 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
 
 /* WIDER */
 @media (min-width: 760px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
-  .diffs { grid-template-columns: repeat(2, 1fr); }
-  .features { grid-template-columns: repeat(3, 1fr); }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .diffs { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 980px) {
   .hero-bg {
@@ -241,5 +239,5 @@ h1, h2, h3 { color: var(--ink); margin: 0; letter-spacing: -0.02em; }
   }
   .hero { padding: 84px 0 110px; }
   .hero-inner { grid-template-columns: 1.15fr 1fr; gap: 56px; }
-  .cards { grid-template-columns: repeat(4, 1fr); }
+  .features { grid-template-columns: repeat(4, 1fr); }
 }
