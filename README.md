@@ -3,7 +3,7 @@
 Static landing page for **White Hot** (the iOS + Apple Watch game; its codebase is
 still called Reverdure). Plain HTML/CSS, no build step. Lives in its own public repo so
 the game's source stays private. Served by GitHub Pages at
-`https://reverdure.yourstrategy.co`.
+`https://whitehot.yourstrategy.co` (the old `reverdure.yourstrategy.co` redirects here from the `reverdure-redirect` repo).
 
 ## Files
 
