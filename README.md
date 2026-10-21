@@ -1,38 +1,32 @@
-# Reverdure — marketing site
+# White Hot — marketing site
 
-Static landing page for **Reverdure** (the iOS + Apple Watch game). Plain HTML/CSS,
-no build step. Lives in its own public repo so the game's source stays private.
+Static landing page for **White Hot** (the iOS + Apple Watch game; its codebase is
+still called Reverdure). Plain HTML/CSS, no build step. Lives in its own public repo so
+the game's source stays private. Served by GitHub Pages at
+`https://reverdure.yourstrategy.co`.
 
 ## Files
 
 | Path | What |
 |---|---|
 | `index.html` | The page |
-| `styles.css` | All styling (mobile-first) |
-| `assets/hexfield.svg` | Generated hero background (grey → green reclamation) |
-| `assets/screenshot-map.jpg` | In-phone gameplay screenshot shown in the hero |
+| `styles.css` | All styling (mobile-first) — the game's own look: the dark map's ground, the heat ramp, the play button's ember, Liquid Glass panels |
+| `assets/territory.jpg` | Hero and closing backdrop: territory baked by the game's own map code |
+| `assets/screenshot.jpg` | In-phone gameplay screenshot shown in the hero |
+| `assets/app-icon.png` | The app icon (also the share page's wordmark icon) |
 | `og-image.png` | Link-preview / social share card |
+| `tools/make_assets.py` | Builds `territory.jpg` and `og-image.png` from the game repo's renders |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (no Jekyll) |
 
-## Hosting (GitHub Pages)
+The share landing page the game server serves (`server/app/routes/share.py` in the game
+repo) copies this site's colour tokens; change them together.
 
-1. Push to a **public** repo (Pages on a private repo needs a paid GitHub plan).
-2. Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `/ (root)`.
-3. Site goes live at `https://<user>.github.io/<repo>/` within a minute or two.
+## Art
 
-### Custom domain (free, with HTTPS)
-
-- **Subdomain** (e.g. `reverdure.yourstrategy.co`): add a DNS `CNAME` record pointing
-  to `<user>.github.io`, then set the domain under Settings → Pages. GitHub commits a
-  `CNAME` file and provisions HTTPS automatically.
-- **Apex** (e.g. `reverdure.com`): point `A` records at GitHub's IPs
-  (`185.199.108–111.153`) and set the domain under Settings → Pages.
-
-## Updating the beta link
-
-The "Join the beta" buttons point at a placeholder. Replace every
-`https://testflight.apple.com/join/PLACEHOLDER` in `index.html` with the real
-TestFlight public link.
+The territory art is rendered by the game repo's `scripts/brand/render-territory`, which
+compiles the app's own `HeatField` (the map's heat overlay) — see the header of
+`tools/make_assets.py` for the commands. The app icon comes from the game repo's
+`scripts/brand/render-icon`.
 
 ## Local preview
 
